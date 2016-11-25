@@ -14,16 +14,15 @@ function business_one_post_type(){
 
 	register_post_type('about',array(
 		'labels' => array(
-			'name' => __('About','business-one'),
+			'name' => __('Tagesmenüs','business-one'),
 			),
-		'description' => __('Add what you do, skills and history','business-one'),		
+		'description' => __('','business-one'),		
 		'public' => true,
 		'menu_position' => 100,
-		'menu_icon' => 'dashicons-nametag',
-		'supports' => array('title'),
+		'menu_icon' => 'dashicons-nametag'
 		));
 
-
+/*
 	register_post_type('skill',array(
 		'labels' => array(
 			'name' => __('Skill','business-one'),
@@ -49,16 +48,16 @@ function business_one_post_type(){
 		'supports' => array('title','editor','thumbnail'),
 		));
 	
-
+*/
 	/* Taxonomy for Portfolio */
-	register_taxonomy('port_post','portfolio',array(
+/*	register_taxonomy('port_post','portfolio',array(
 		'hierarchical' => true,
 		'label' => 'Category',
 		'query_var' => true,
 		'rewrite' => true
 	));	
 
-
+/*
 
 	register_post_type('services',array(
 		'labels' => array(
@@ -70,7 +69,7 @@ function business_one_post_type(){
 		'menu_icon' => 'dashicons-hammer',
 		'supports' => array('title'),
 		));
-
+*/
 
 	register_post_type('team',array(
 		'labels' => array(
@@ -82,7 +81,7 @@ function business_one_post_type(){
 		'menu_icon' => 'dashicons-groups',
 		'supports' => array('title'),
 		));
-
+/*
 
 	register_post_type('clients',array(
 		'labels' => array(
@@ -95,7 +94,7 @@ function business_one_post_type(){
 		'supports' => array('title'),
 		));
 
-
+*/
 }
 
 add_action('init','business_one_post_type');

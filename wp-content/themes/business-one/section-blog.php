@@ -23,7 +23,17 @@
 
 			<div class="meal-wrap">
 
+			<?php 
+			$hasFixedText = strlen($business['events-fixedheadline']) > 0;
+			if($hasFixedText){?>
+				<div class="h-date_entry">
+					<h3 class="p-date_title"><?php echo $business['events-fixedheadline']; ?></h3>
+					<div class="p-desc"><?php echo $business['events-fixedtext']; ?><div> <!-- end p-desc -->
+				
+				</div> <!-- end h-resume -->
+
 				<?php 
+			}
 				if(count($home_post) > 0) {
 					foreach($home_post as $post) {
 						setup_postdata( $post ); ?>
@@ -59,7 +69,7 @@
 
 				<?php 
 					} 
-				} else { ?>
+				} else if(!$hasFixedText){ ?>
 				<div class="h-date_entry">
 					<h3 class="p-date_title"><?php echo $business['events-none_text']; ?></h3>
 				</div>

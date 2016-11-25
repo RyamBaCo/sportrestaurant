@@ -530,6 +530,25 @@ if (!class_exists('admin_folder_Redux_Framework_config')) {
                         'subtitle'  => __('', 'business-one'),                        
                         'validate'  => 'no_html',
                         'default'   => ''
+                    ),
+
+
+                    array(
+                        'id'        => 'events-fixedheadline',
+                        'type'      => 'text',
+                        'title'     => __('Veranstaltungen Fixtext Überschrift', 'business-one'),
+                        'subtitle'  => __('', 'business-one'),                        
+                        'validate'  => 'no_html',
+                        'default'   => ''
+                    ), 
+
+                    array(
+                        'id'        => 'events-fixedtext',
+                        'type'      => 'textarea',
+                        'title'     => __('Veranstaltungen Fixtext Beschreibung', 'business-one'),
+                        'subtitle'  => __('', 'business-one'),                        
+                        'validate'  => 'no_html',
+                        'default'   => ''
                     ), 
 
                     array(
@@ -567,6 +586,7 @@ if (!class_exists('admin_folder_Redux_Framework_config')) {
                         'validate'  => 'no_html',
                         'default'   => ''
                     ),
+
 /*
                     array(
                         'id'        => 'portfolio-text',
@@ -660,12 +680,12 @@ if (!class_exists('admin_folder_Redux_Framework_config')) {
                 'opt_name' => 'business',
                 'display_name' => 'Business One WordPress Theme',
                 'page_slug' => '_options',
-                'page_title' => 'Business One Options',
+                'page_title' => 'Sportrestaurant',
                 'intro_text' => '',
                 'footer_text' => 'Business one Theme by Burak Aydin',
                 'admin_bar' => '1',
                 'menu_type' => 'submenu',
-                'menu_title' => 'Business One Options',
+                'menu_title' => 'Sportrestaurant',
                 'allow_sub_menu' => '1',
                 'page_parent_post_type' => 'your_post_type',
                 'page_priority' => '100',

@@ -212,7 +212,7 @@ jQuery(function($){
 
                 
 
-                if($(window).scrollTop() > 610){
+                if($(window).scrollTop() > 420){
                     $('.fixed-menu').slideDown(150);
                 }else{
                     $('.fixed-menu').slideUp(100);
@@ -267,7 +267,7 @@ jQuery(function($){
 
 
       
-        var tophght=300;
+        var tophght=400;
         
 
         if($('section').hasClass('section-about')){
@@ -417,12 +417,12 @@ jQuery(function($){
     });
 
 
-        $('.section-divider-one').parallax();
+/*        $('.section-divider-one').parallax();
 
         $('.section-service').parallax(); 
 
         $('.section-client').parallax();
-
+*/
 
        
 

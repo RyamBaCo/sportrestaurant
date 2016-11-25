@@ -28,23 +28,31 @@
 
 					<div class="meal-wrap">
 
-					<?php query_posts('post_type=about'); ?>
+					<?php 
+					$today = getdate();
+					query_posts(array(
+						'date_query' => array(
+							'column'  => 'post_date',
+							'after' => 'today midnight'
+							),
+						'post_status' => any,
+					    'post_type' => 'about',
+						'order' => 'ASC'
+					));
+
+//					'post_type=about & year =' . $today['year'] . '& monthnum =' . $today['mon'] . '& day =' . $today['mday'] . ' & order=ASC & post_status="any"'); ?>
 
 					<?php while(have_posts()):the_post(); ?>
 
-						<?php if(get_field('meal_item')){ ?>
+						<div class="h-date_entry">
+				
+							<h3 class="p-date_title"><?php the_date('l, j.m.Y'); ?></h3>
 
-							<div class="h-date_entry">
-					
-								<h3 class="p-date_title"><?php the_title(); ?></h3>
-
-								<div class="p-desc">
-									<?php the_field('meal_item'); ?>
-								</div> <!-- end p-desc -->
-							
-							</div> <!-- end h-resume -->
-
-						<?php } ?>
+							<div class="p-desc">
+								<?php the_content(); ?>
+							</div> <!-- end p-desc -->
+						
+						</div> <!-- end h-resume -->
 
 					<?php endwhile; ?>
 

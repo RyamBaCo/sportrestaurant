@@ -408,42 +408,6 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 	register_field_group(array (
-		'id' => 'acf_job-column',
-		'title' => 'Menü',
-		'fields' => array (
-			array (
-				'key' => 'field_53c649fe8addd',
-				'label' => 'Menü',
-				'name' => 'meal_item',
-				'type' => 'textarea',
-				'instructions' => '',
-				'default_value' => '',
-				'placeholder' => '',
-				'maxlength' => '',
-				'rows' => '',
-				'formatting' => 'br',
-			),
-		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'about',
-					'order_no' => 0,
-					'group_no' => 0,
-				),
-			),
-		),
-		'options' => array (
-			'position' => 'normal',
-			'layout' => 'default',
-			'hide_on_screen' => array (
-			),
-		),
-		'menu_order' => 0,
-	));
-	register_field_group(array (
 		'id' => 'acf_progress-bar-5',
 		'title' => 'Progress Bar',
 		'fields' => array (
